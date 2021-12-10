@@ -15,14 +15,14 @@ namespace ISS.Application
         private readonly ILogger _logger;
 
 
-        private string connectionString =
-            (@"Data Source=C:\Users\aradionov\RiderProjects\ISS_V2\ISS.WebApi\Database\issCoordinates.db");
-
-
         public ISSService(ILogger logger)
         {
             _logger = logger;
         }
+
+        private string connectionString =
+            (@"Data Source=C:\Users\aradionov\RiderProjects\ISS_V2\ISS.WebApi\Database\issCoordinates.db");
+
 
         public void Create()
         {

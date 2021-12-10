@@ -1,11 +1,12 @@
 using System;
 using ISS.Application;
+using ISS.WebApi.Handlers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Serilog.Events;
 using Serilog.Exceptions;
-
+using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
@@ -19,28 +20,37 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 
-try
+namespace ISS.WebApi
 {
-    var builder = WebApplication.CreateBuilder(args);
+    public class Program
+    {
+        private readonly ISSService _issService;
 
-    builder.Host.UseSerilog();
+        public static void Main(string[] args)
+        {
+            try
+            {
+                var builder = WebApplication.CreateBuilder(args);
 
-    builder.Services.AddControllers();
-    builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddTransient<ISSService>();
+                builder.Host.UseSerilog();
 
-    var app = builder.Build();
+                builder.Services.AddControllers();
+                builder.Services.AddEndpointsApiExplorer();
+                builder.Services.AddTransient<ISSService>();
 
-    app.MapControllers();
-    app.Run();
+                var app = builder.Build();
 
-
-}
-catch (Exception ex)
-{
-    Log.Error(ex, "Something went wrong");
-}
-finally
-{
-    Log.CloseAndFlush();
+                app.MapControllers();
+                app.Run();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Something went wrong");
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            } 
+        }
+    }
 }

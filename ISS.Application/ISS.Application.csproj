@@ -1,10 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk.Worker">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <Nullable>enable</Nullable>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <UserSecretsId>dotnet-ISS.Application-96BBA31B-4A6C-4A37-B94F-9B861D635158</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
