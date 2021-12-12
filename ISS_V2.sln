@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISS.Application", "ISS.Appl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISS.WebApi", "ISS.WebApi\ISS.WebApi.csproj", "{18E1C0CB-07C0-4256-99A3-9ACEB5C5F79E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{8ED8C62C-BCD2-4DD6-8617-25BFF51C42F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{18E1C0CB-07C0-4256-99A3-9ACEB5C5F79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18E1C0CB-07C0-4256-99A3-9ACEB5C5F79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18E1C0CB-07C0-4256-99A3-9ACEB5C5F79E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ED8C62C-BCD2-4DD6-8617-25BFF51C42F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED8C62C-BCD2-4DD6-8617-25BFF51C42F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED8C62C-BCD2-4DD6-8617-25BFF51C42F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED8C62C-BCD2-4DD6-8617-25BFF51C42F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
